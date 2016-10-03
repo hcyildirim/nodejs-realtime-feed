@@ -12,8 +12,8 @@
             socket.emit('post added',$("#comment").val());
             $("#comment").val('');
           });
-          socket.on('refresh feed',function(msg){
-            $("#show_comments").append(msg + '<br /><br />');
+          socket.on('refresh feed',function(post){
+            $("#show_comments").append(post + '<br /><br />');
           });
     });
     </script>
